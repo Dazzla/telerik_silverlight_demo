@@ -91,8 +91,6 @@ namespace SilverlightTest
         {
             // Verify Item2Textboxview's visibility is Visible
             Assert.AreEqual(ArtOfTest.WebAii.Silverlight.UI.Visibility.Visible, Pages.TelerikDataFormFor.SilverlightApp.Item2Textboxview.ComputedVisibility, "Element visibility does not match expected value");
-            //Assert.AreEqual(ArtOfTest.WebAii.Silverlight.UI.TextBox.TextProperty,  "Darren", "Element content does not match expected value");
-            Log.WriteLine(Pages.TelerikDataFormFor.SilverlightApp.Item2Textboxview);
         }
     }
 }
