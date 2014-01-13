@@ -76,7 +76,8 @@ namespace SilverlightTest
         public void DataFormVerify_CodedStep()
         {
             // Verify Item1Textbox's text content Same 'Darren'
-            Assert.IsFalse((ArtOfTest.Common.CompareUtils.StringCompare(Pages.TelerikDataFormFor.SilverlightApp.Item1Textbox.Text, "Darren", ArtOfTest.Common.StringCompareType.Same) == false), string.Format("Verify Item1Textbox\'s text content Same \'Darren\' failed.  Actual value \'{0}\'", Pages.TelerikDataFormFor.SilverlightApp.Item1Textbox.Text));
+            //Assert.IsFalse((ArtOfTest.Common.CompareUtils.StringCompare(Pages.TelerikDataFormFor.SilverlightApp.Item1Textbox.Text, "Darren", ArtOfTest.Common.StringCompareType.Same) == false), string.Format("Verify Item1Textbox\'s text content Same \'Darren\' failed.  Actual value \'{0}\'", Pages.TelerikDataFormFor.SilverlightApp.Item1Textbox.Text));
+            Assert.IsTrue(ArtOfTest.Common.CompareUtils.StringCompare(Pages.TelerikDataFormFor.SilverlightApp.Item1Textbox.Text, "Darren", ArtOfTest.Common.StringCompareType.Same), string.Format("Verify Item1Textbox\'s text content Same \'Darren\' failed.  Actual value \'{0}\'", Pages.TelerikDataFormFor.SilverlightApp.Item1Textbox.Text));
             
         }
     }
