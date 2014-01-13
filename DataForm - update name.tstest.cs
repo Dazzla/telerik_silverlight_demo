@@ -45,7 +45,7 @@ namespace SilverlightTest
     //
         
 
-    public class DataForm : BaseWebAiiTest
+    public class DataForm___update_name : BaseWebAiiTest
     {
         #region [ Dynamic Pages Reference ]
 
@@ -72,32 +72,11 @@ namespace SilverlightTest
         
         // Add your test methods here...
     
-        [CodedStep(@"Type 'Darren' into Item1Textbox", RequiresSilverlight=true)]
-        public void DataForm_CodedStep()
+        [CodedStep(@"Verify Item1Textbox's text content Same 'Darren'", RequiresSilverlight=true)]
+        public void DataFormVerify_CodedStep()
         {
-            SilverlightApp app = ActiveBrowser.SilverlightApps()[0];
-            // Type 'Darren' into Item1Textbox
-            Pages.TelerikDataFormFor.SilverlightApp.Item1Textbox.SetText(true, "Darren", 10, 100, false);
-        }
-    
-        //[CodedStep(@"New Coded Step")]
-        //public void DataForm_CodedStep1()
-        //{
-            
-        //}
-    
-        [CodedStep(@"Verify Item2Textboxview's visibility is Visible", RequiresSilverlight=true)]
-        public void DataForm_CodedStep1()
-        {
-            // Verify Item2Textboxview's visibility is Visible
-            Assert.AreEqual(ArtOfTest.WebAii.Silverlight.UI.Visibility.Visible, Pages.TelerikDataFormFor.SilverlightApp.Item2Textboxview.ComputedVisibility, "Element visibility does not match expected value");
-        }
-    
-        [CodedStep(@"Click BeginEditRadbutton", RequiresSilverlight=true)]
-        public void DataForm_CodedStep2()
-        {
-            // Click BeginEditRadbutton
-            Pages.TelerikDataFormFor.SilverlightApp.BeginEditRadbutton.User.Click(ArtOfTest.WebAii.Core.MouseClickType.LeftClick, 6, 6, ArtOfTest.Common.OffsetReference.TopLeftCorner, ArtOfTest.Common.ActionPointUnitType.Pixel);
+            // Verify Item1Textbox's text content Same 'Darren'
+            Assert.IsFalse((ArtOfTest.Common.CompareUtils.StringCompare(Pages.TelerikDataFormFor.SilverlightApp.Item1Textbox.Text, "Darren", ArtOfTest.Common.StringCompareType.Same) == false), string.Format("Verify Item1Textbox\'s text content Same \'Darren\' failed.  Actual value \'{0}\'", Pages.TelerikDataFormFor.SilverlightApp.Item1Textbox.Text));
             
         }
     }
